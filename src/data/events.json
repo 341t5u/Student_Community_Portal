@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "name": "Fall Tech Hackathon",
+    "date": "October 24, 2026",
+    "location": "Main Campus Library Auditorium",
+    "description": "24-hour hackathon to build software solutions for campus challenges.",
+    "fullDetails": "Join over 200 students for 24 hours of hacking, free food, and tech workshops. Mentors from top companies will be present."
+  },
+  {
+    "id": "2",
+    "name": "Annual Cultural Night",
+    "date": "November 12, 2026",
+    "location": "Student Recreation Center",
+    "description": "Celebrate campus diversity with traditional food, music, and dance performances.",
+    "fullDetails": "Featuring dishes from over 30 countries and live stage performances by international student associations."
+  }
+]

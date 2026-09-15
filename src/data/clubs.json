@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "name": "Coding Club",
+    "category": "Technology",
+    "description": "A community of student developers building web and mobile applications.",
+    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400",
+    "meetingInfo": "Every Tuesday at 5:00 PM in Science Building Room 302",
+    "membersCount": 140
+  },
+  {
+    "id": "2",
+    "name": "Robotics Society",
+    "category": "Technology",
+    "description": "Design, program, and compete with custom-built robots.",
+    "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400",
+    "meetingInfo": "Thursdays at 6:00 PM in Engineering Lab B",
+    "membersCount": 85
+  },
+  {
+    "id": "3",
+    "name": "Campus Arts & Drama",
+    "category": "Arts",
+    "description": "Express creativity through stage performances, musical theater, and fine arts.",
+    "image": "https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?w=400",
+    "meetingInfo": "Mondays & Wednesdays at 4:30 PM at the Student Center Auditorium",
+    "membersCount": 95
+  }
+]

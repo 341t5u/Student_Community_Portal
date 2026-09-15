@@ -1,0 +1,160 @@
+/* Import Modern Font */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    "Plus Jakarta Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Light Mode Theme Variables */
+.light-theme {
+  --bg-color: #f8fafc;
+  --bg-card: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border-color: #e2e8f0;
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+/* Dark Mode Theme Variables */
+.dark-theme {
+  --bg-color: #0f172a;
+  --bg-card: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --border-color: #334155;
+  --primary-color: #3b82f6;
+  --primary-hover: #60a5fa;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+/* Navigation Bar Styling */
+nav {
+  background-color: var(--bg-card) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  box-shadow: var(--shadow-sm);
+  padding: 1.2rem 2rem !important;
+}
+
+nav a {
+  color: var(--text-secondary) !important;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--primary-color) !important;
+}
+
+/* Button & CTA Redesign */
+button {
+  font-family: inherit;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: var(--primary-color);
+  color: #ffffff !important;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* Card Modernization */
+div[style*="border"],
+section,
+.card {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 12px !important;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease !important;
+}
+
+div[style*="border"]:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg) !important;
+}
+
+/* Hero Section Gradient Effect */
+section[style*="background"] {
+  background: linear-gradient(
+    135deg,
+    rgba(37, 99, 235, 0.08) 0%,
+    rgba(147, 51, 234, 0.08) 100%
+  ) !important;
+  border: 1px solid var(--border-color) !important;
+  padding: 3.5rem 2rem !important;
+}
+
+/* Typography & Links */
+h1,
+h2,
+h3 {
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+}
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+/* Form Controls */
+input,
+select {
+  font-family: inherit;
+  border-radius: 8px !important;
+  border: 1px solid var(--border-color) !important;
+  padding: 0.6rem 1rem !important;
+  outline: none;
+  background-color: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}

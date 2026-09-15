@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "title": "University Library Digital Catalog",
+    "category": "Library",
+    "link": "https://z-lib.ac/",
+    "description": "Access e-books, research journals, and reserve study rooms online."
+  },
+  {
+    "id": "2",
+    "title": "Math & Science Tutoring Center",
+    "category": "Academic Support",
+    "link": "https://www.tutorialspoint.com/maths_tutorials.htm",
+    "description": "Free walk-in and virtual tutoring for foundational courses."
+  },
+  {
+    "id": "3",
+    "title": "Career Services & Resume Review",
+    "category": "Career Services",
+    "link": "https://www.canva.com/create/resumes/?msockid=3374c8413fed64ea382cdb053e596570",
+    "description": "Schedule mock interviews, resume critiques, and explore internship openings."
+  }
+]
