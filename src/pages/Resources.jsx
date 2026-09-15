@@ -1,43 +1,101 @@
+// src/pages/Resources.jsx
 import { useState, useEffect } from "react";
+import resourcesData from "../data/resources.json";
 
 export default function Resources() {
   const [resources, setResources] = useState([]);
+  const [loading, setLoading] = useState(true);
 
+  // Demonstrate useEffect state hydration
   useEffect(() => {
-    fetch("/src/data/resources.json")
-      .then((res) => res.json())
-      .then((data) => setResources(data));
+    // Simulates an async data load using local data
+    const timer = setTimeout(() => {
+      setResources(resourcesData || []);
+      setLoading(false);
+    }, 300);
+
+    return () => clearTimeout(timer);
   }, []);
+
+  if (loading)
+    return (
+      <div style={{ textAlign: "center", padding: "4rem" }}>
+        ⏳ Loading resources...
+      </div>
+    );
 
   return (
     <div>
-      <h1>Student Resources</h1>
-      <div style={{ display: "grid", gap: "1rem", marginTop: "1rem" }}>
-        {resources.map((res) => (
-          <div
-            key={res.id}
-            style={{
-              border: "1px solid #ddd",
-              padding: "1rem",
-              borderRadius: "8px",
-            }}
-          >
+      <div style={{ marginBottom: "2rem" }}>
+        <h1
+          style={{
+            fontSize: "2.2rem",
+            fontWeight: "800",
+            marginBottom: "0.5rem",
+          }}
+        >
+          Student Resources
+        </h1>
+        <p style={{ color: "var(--text-muted)" }}>
+          Access key support services, tutoring centers, and academic tools.
+        </p>
+      </div>
+
+      <div className="card-grid">
+        {resources.map((res, index) => (
+          <div key={res.id || index} className="ui-card">
             <span
               style={{
-                background: "#e8f4f8",
-                color: "#007bff",
-                padding: "0.2rem 0.5rem",
-                borderRadius: "4px",
+                backgroundColor: "var(--primary-light)",
+                color: "var(--primary)",
+                padding: "0.25rem 0.75rem",
+                borderRadius: "20px",
                 fontSize: "0.8rem",
+                fontWeight: "700",
+                display: "inline-block",
+                marginBottom: "0.8rem",
+                width: "fit-content",
               }}
             >
-              {res.category}
+              {res.category || "General"}
             </span>
-            <h3 style={{ margin: "0.5rem 0" }}>{res.title}</h3>
-            <p>{res.description}</p>
-            <a href={res.link} target="_blank" rel="noreferrer">
-              Access Portal ↗
-            </a>
+
+            <h3
+              style={{
+                fontSize: "1.2rem",
+                fontWeight: "700",
+                marginBottom: "0.5rem",
+              }}
+            >
+              {res.title || res.name}
+            </h3>
+
+            <p
+              style={{
+                color: "var(--text-muted)",
+                fontSize: "0.92rem",
+                flex: 1,
+                marginBottom: "1.2rem",
+              }}
+            >
+              {res.description}
+            </p>
+
+            {res.link && (
+              <a
+                href={res.link}
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  color: "var(--primary)",
+                  fontWeight: "700",
+                  textDecoration: "none",
+                  fontSize: "0.9rem",
+                }}
+              >
+                Access Portal ↗
+              </a>
+            )}
           </div>
         ))}
       </div>
